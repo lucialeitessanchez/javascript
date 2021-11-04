@@ -37,13 +37,18 @@ if (semaforo === 'verde') {
     console.log('color no identificado');
 }
 
-//switch
-
-switch (key) {
-    case value:
-        
+//switch        hace una comparacion estricta
+var producto = 'papaya';
+switch (producto) {
+    case 'papaya':
+        case 'naranja':
+        console.log('Las papayas y naranjas cuestan $1 cada libra');
         break;
-
+  
+            case 'mango':
+                console.log('Los mangos cuestan $2 cada libra');
+                break;        
     default:
+        console.log('no disponemos de ese producto');
         break;
 }
