@@ -89,7 +89,7 @@ if (totalCompra <= 10) {
 
 //switch
 var totalCompra = 5;
-switch (totalCompra) {
+switch (true) {
     case (totalCompra <= 10):
         console.log('La compra es de $'+ totalCompra +' y se suma un gasto de envio, total:$'+(totalCompra+3));
         break;
