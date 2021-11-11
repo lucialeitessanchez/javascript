@@ -32,6 +32,13 @@ while (i<11) {
     i++
 }
 
+var i=1;
+
 do {
-    var i=
-} while (condition);
+    var j=1;
+    do {
+        console.log(i*j);
+        j++;
+    } while (j<=10);
+        i++;
+} while (i<=12);
