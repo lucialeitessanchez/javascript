@@ -138,3 +138,11 @@ var resultado = estudiantes.map((estudiante)=>estudiante.matriculado).reduce((ac
 
 console.log(estudiantes);
 console.log(resultado);
+
+//some every recibe como parametro otra funcion, retorna un valor sea verdadero o falso si al menos uno de los elementos cumple con la condicion
+//var numeros = [1,2,3,4,5,6,7,8,9,10]
+
+var numeros = [3,5,7,9]
+//queremos vereficar si al menos uno de estos elementos es un numero par
+var resultado = numeros.some((numero)=> numero % 2 === 0)
+console.log(resultado);
