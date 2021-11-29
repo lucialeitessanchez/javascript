@@ -144,5 +144,63 @@ console.log(resultado);
 
 var numeros = [3,5,7,9]
 //queremos vereficar si al menos uno de estos elementos es un numero par
-var resultado = numeros.some((numero)=> numero % 2 === 0)
+var resultado = numeros.some((numero)=> numero % 2 === 0) //si al menos uno cumple con la condicion va a dar verdadero
 console.log(resultado);
+
+//every devuelve un valor logico si TODOS los elementos del array cumplen con la condicion 
+var numeros = [1,2,3,4,5,6,7,8,9,0,10]
+var resultado = numeros.every((numero)=> numero % 2 == 0); // si todos los elementos son pares
+console.log(resultado); //false porque no todos son pares
+
+//find se encarga de buscar un elemento que coincida con cierta condicion adentro del array y nos retorna-
+//en cambio findIdex nos retorna la posicion del elemento en el arreglo
+
+//fin
+var clientes = [
+    {id: 1, nombre:'Ada'},
+    {id: 2, nombre:'Eve'},
+    {id: 3, nombre:'Nico'},
+    {id: 4, nombre:'Chano'}
+]
+
+//buscar un unico elemento adentro de este arreglo, recibe como parametro una funcion, es una funcion inmutable
+var cliente = clientes.find((cliente)=> cliente.id === 1); //devuelve un objeto especifico
+var filter = clientes.filter((cliente)=> cliente.id === 1); //devuelve un array, nos retorna todas las coincidencias 
+console.log(cliente);
+console.log(clientes);
+console.log(filter);
+
+//find retorna un unico elemento, un unico elemento ( el primero que encuentra), y filter las coicidencias en un arreglo
+
+//finIndex nos devuelve la posicion del elemento, unica
+var clientes = [
+    {id: 1, nombre:'Ada'},
+    {id: 2, nombre:'Eve'},
+    {id: 3, nombre:'Nico'},
+    {id: 4, nombre:'Chano'}
+]
+
+var posicion = clientes.findIndex((cliente)=> cliente.id === 2); //imprime 1, porque es la posicion en el arreglo del elemento donde coicide eso
+console.log(posicion);
+
+
+//includes nos ayuda si en un arreglo existe un elemento en especifico, devuelve verdadero o falso segun corresponda
+var mascotas = ['perro','gato','conejo'];
+var resultado = mascotas.includes('gato'); //tambien se puede verificar si contiene 
+console.log(resultado);
+
+console.log('lucia'.includes('a'));
+
+var buscador = (parametro)=>{
+    let clientes = [
+        {id: 1, nombre:'Ada'},
+        {id: 2, nombre:'Eve'},
+        {id: 3, nombre:'Nico'},
+        {id: 4, nombre:'Chano'}
+    ]
+
+    return clientes.filter((cliente)=> cliente.nombre.includes(parametro)) //va a buscar en base al nombre
+}
+
+console.log(buscador('a')); // va pasando por cada elemento y devuelve los que contienen a en el nombre
+
